@@ -1,0 +1,1500 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<title>Ninja tricks for Groovy system scripting</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=1274, user-scalable=no">
+	<link rel="stylesheet" href="themes/ribbon/styles/style.css">
+	<link rel="stylesheet" href="themes/ribbon/styles/print.css" media="print">
+	<!--
+		To apply styles to the certain slides
+		use slide ID to get needed elements
+		-->
+	<style>
+		#Cover h2 { color:#FFF; text-align:left; font-size:60px; }
+		#FitToWidth h2,
+		#FitToHeight h2 {
+			color:#FFF;
+			text-align:center;
+			}
+	</style>
+</head>
+<body class="list">
+	<header class="caption">
+		<h1>Ninja tricks for Groovy system scripting</h1>
+		<p>Andrey Adamovich, Aestas/IT</p>
+	</header>
+	<div class="slide cover" id="Cover"><div>
+		<section>
+			<header>
+				<h2></h2>
+			</header><img src="images/COVER_JFOKUS.png" />
+		</section>
+	</div></div>	
+	
+    
+    
+       
+    <div class="slide shout" id="1"><div>
+        <section>
+			<header>
+				<h2>About me</h2>
+			</header>    
+            
+		</section>
+	</div></div>
+    
+    
+       
+    <div class="slide" id="2"><div>
+        <section>
+			<header>
+				<h2>Andrey Adamovich</h2>
+			</header>    
+            <ul> 
+ <li>Bio: Developer, coach, speaker, author</li> 
+ <li>Company: Aestas/IT (<a href="http://aestasit.com">http://aestasit.com</a>)</li> 
+ <li>E-mail: <a href="mailto:andrey@aestasit.com">andrey@aestasit.com</a></li> 
+ <li>Linkedin: <a href="http://www.linkedin.com/in/andreyadamovich">http://www.linkedin.com/in/andreyadamovich</a></li> 
+ <li>Lanyrd: <a href="http://lanyrd.com/profile/andrey-adamovich">http://lanyrd.com/profile/andrey-adamovich</a></li> 
+ <li>GitHub: <a href="https://github.com/aadamovich">https://github.com/aadamovich</a></li> 
+ <li>SO: <a href="http://stackoverflow.com/users/162792/andrey-adamovich">http://stackoverflow.com/users/162792/andrey-adamovich</a></li> 
+ <li>Twitter: @codingandrey, @aestasit</li> 
+</ul>
+		</section>
+	</div></div>
+    
+    
+       
+    <div class="slide" id="3"><div>
+        <section>
+			<header>
+				<h2>Exposed to operations</h2>
+			</header>    
+            <ul> 
+ <li>Maintenance scripts (backup, cleaning, monitoring)</li> 
+ <li>Scheduled/CRON jobs (transfers, conversions, notifications)</li> 
+ <li>Automation tasks (deployment, packaging, testing)</li> 
+ <li>Web applications (status pages, back doors, dashboards)</li> 
+</ul>
+		</section>
+	</div></div>
+    
+    
+       
+    <div class="slide shout" id="4"><div>
+        <section>
+			<header>
+				<h2>Why Groovy?</h2>
+			</header>    
+            
+		</section>
+	</div></div>
+    
+    
+       
+    <div class="slide" id="5"><div>
+        <section>
+			<header>
+				<h2>Native system scripting</h2>
+			</header>    
+            <ul> 
+ <li>Bash, Dash, Zsh, Fish, Csh etc.</li> 
+ <li>Bat, Cmd and, eventually, PowerShell (PoSH)</li> 
+</ul>
+		</section>
+	</div></div>
+    
+    
+       
+    <div class="slide" id="6"><div>
+        <section>
+			<header>
+				<h2>Arrays in BAT?</h2>
+			</header>    
+            
+<figure> 
+ <img src="images/ARRAYS_IN_BAT.png" alt="Arrays" /> 
+</figure>
+
+		</section>
+	</div></div>
+    
+    
+       
+    <div class="slide" id="7"><div>
+        <section>
+			<header>
+				<h2>BASH vs. PoSH</h2>
+			</header>    
+            
+<figure> 
+ <img src="images/BASH_VS_POWERSHELL.png" alt="Turtles" /> 
+</figure>
+
+		</section>
+	</div></div>
+    
+    
+       
+    <div class="slide" id="8"><div>
+        <section>
+			<header>
+				<h2>Scripting languages</h2>
+			</header>    
+            <ul> 
+ <li>Perl</li> 
+ <li>Python</li> 
+ <li>Ruby</li> 
+ <li>Lua</li> 
+ <li>Javascript</li> 
+ <li>...</li> 
+</ul>
+		</section>
+	</div></div>
+    
+    
+       
+    <div class="slide shout" id="9"><div>
+        <section>
+			<header>
+				<h2>Multi-platform support</h2>
+			</header>    
+            
+		</section>
+	</div></div>
+    
+    
+       
+    <div class="slide shout" id="10"><div>
+        <section>
+			<header>
+				<h2>Does it work on Windows?</h2>
+			</header>    
+            
+		</section>
+	</div></div>
+    
+    
+       
+    <div class="slide shout" id="11"><div>
+        <section>
+			<header>
+				<h2>Operational simplicity</h2>
+			</header>    
+            
+		</section>
+	</div></div>
+    
+    
+       
+    <div class="slide shout" id="12"><div>
+        <section>
+			<header>
+				<h2>Maintainable code</h2>
+			</header>    
+            
+		</section>
+	</div></div>
+    
+    
+       
+    <div class="slide shout" id="13"><div>
+        <section>
+			<header>
+				<h2>Stable ecosystem</h2>
+			</header>    
+            
+		</section>
+	</div></div>
+    
+    
+       
+    <div class="slide shout" id="14"><div>
+        <section>
+			<header>
+				<h2>Rich extension library</h2>
+			</header>    
+            
+		</section>
+	</div></div>
+    
+    
+       
+    <div class="slide" id="15"><div>
+        <section>
+			<header>
+				<h2>Groovy is just a JAR</h2>
+			</header>    
+            
+<figure> 
+ <img src="images/MAVEN_CENTRAL_VIEW.png" alt="Maven" /> 
+</figure>
+
+		</section>
+	</div></div>
+    
+    
+       
+    <div class="slide shout" id="16"><div>
+        <section>
+			<header>
+				<h2>Reuse JVM knowledge</h2>
+			</header>    
+            
+		</section>
+	</div></div>
+    
+    
+       
+    <div class="slide" id="17"><div>
+        <section>
+			<header>
+				<h2>GVM</h2>
+			</header>    
+            <pre>
+<code>curl -s get.gvmtool.net | bash</code>
+<code>gvm install groovy 2.3.6</code>
+<code>gvm default groovy 2.3.6</code>
+<code>gvm list groovy</code>
+</pre>
+		</section>
+	</div></div>
+    
+    
+       
+    <div class="slide" id="18"><div>
+        <section>
+			<header>
+				<h2>PoSH GVM</h2>
+			</header>    
+            <pre>
+<code>&gt; posh-gvm.psm1 cannot be loaded </code>
+<code>&gt; because the execution of scripts </code>
+<code>&gt; is disabled on this system.</code>
+</pre>
+		</section>
+	</div></div>
+    
+    
+       
+    <div class="slide shout" id="19"><div>
+        <section>
+			<header>
+				<h2>Speed up!</h2>
+			</header>    
+            
+		</section>
+	</div></div>
+    
+    
+       
+    <div class="slide" id="20"><div>
+        <section>
+			<header>
+				<h2>GroovyServ</h2>
+			</header>    
+            
+<figure> 
+ <img src="images/GROOVY_SERV.png" alt="Groovy Serv" /> 
+</figure>
+
+		</section>
+	</div></div>
+    
+    
+       
+    <div class="slide shout" id="21"><div>
+        <section>
+			<header>
+				<h2>Files, directories, and other animals</h2>
+			</header>    
+            
+		</section>
+	</div></div>
+    
+    
+       
+    <div class="slide" id="22"><div>
+        <section>
+			<header>
+				<h2>Reading</h2>
+			</header>    
+            <pre>
+<code>f = new File('test.txt')</code>
+<code>String textContent = f.text</code>
+<code>byte[] binaryContent = file.bytes</code>
+</pre>
+		</section>
+	</div></div>
+    
+    
+       
+    <div class="slide" id="23"><div>
+        <section>
+			<header>
+				<h2>Writing I</h2>
+			</header>    
+            <pre>
+<code>f &lt;&lt; 'hello, this is a test file'</code>
+<code>f.text = new URL('http://server/my_data.json').text</code>
+<code>file.bytes = [ 65, 66, 67, 68 ] as byte[]</code>
+</pre>
+		</section>
+	</div></div>
+    
+    
+       
+    <div class="slide" id="24"><div>
+        <section>
+			<header>
+				<h2>Writing II</h2>
+			</header>    
+            <pre>
+<code>file.text = '''What's in a name? That which we call a rose</code>
+<code>By any other name would smell as sweet.'''</code>
+<code></code>
+<code>file &lt;&lt; 'What\'s in a name? That which we call a rose\n'</code>
+<code>file &lt;&lt; 'By any other name would smell as sweet.'</code>
+</pre>
+		</section>
+	</div></div>
+    
+    
+       
+    <div class="slide" id="25"><div>
+        <section>
+			<header>
+				<h2>Writing III</h2>
+			</header>    
+            <pre>
+<code>file.withWriter { Writer writer -&gt;</code>
+<code>  writer &lt;&lt; 'What\'s in a name? That which we call a rose\n'</code>
+<code>  writer &lt;&lt; 'By any other name would smell as sweet.'</code>
+<code>}</code>
+<code></code>
+<code>file.withOutputStream { OutputStream stream -&gt;</code>
+<code>  stream &lt;&lt; 'What\'s in a name? That which we call a rose\n'</code>
+<code>  stream &lt;&lt; 'By any other name would smell as sweet.'</code>
+<code>}</code>
+</pre>
+		</section>
+	</div></div>
+    
+    
+       
+    <div class="slide" id="26"><div>
+        <section>
+			<header>
+				<h2>Line-by-line</h2>
+			</header>    
+            <pre>
+<code>def lines = f.readLines()</code>
+<code>lines.each { String line -&gt;</code>
+<code>  println line</code>
+<code>}</code>
+</pre>
+		</section>
+	</div></div>
+    
+    
+       
+    <div class="slide" id="27"><div>
+        <section>
+			<header>
+				<h2>eachLine and eachByte</h2>
+			</header>    
+            <pre>
+<code>f.eachLine { String line -&gt;</code>
+<code>  println line</code>
+<code>}</code>
+<code>file.eachByte { int b -&gt;</code>
+<code>  ...</code>
+<code>}</code>
+</pre>
+		</section>
+	</div></div>
+    
+    
+       
+    <div class="slide" id="28"><div>
+        <section>
+			<header>
+				<h2>Filtering I</h2>
+			</header>    
+            <pre>
+<code>outputFile.withPrintWriter { writer -&gt;</code>
+<code>  inputFile.eachLine { line -&gt;</code>
+<code>    if (!line.startsWith('#')) {</code>
+<code>      writer.println(line)</code>
+<code>    }</code>
+<code>  }</code>
+<code>}</code>
+</pre>
+		</section>
+	</div></div>
+    
+    
+       
+    <div class="slide" id="29"><div>
+        <section>
+			<header>
+				<h2>Filtering II</h2>
+			</header>    
+            <pre>
+<code>inputFile.filterLine(outputFile.newWriter()) { line -&gt;</code>
+<code>  !line.startsWith('#')</code>
+<code>}</code>
+</pre>
+		</section>
+	</div></div>
+    
+    
+       
+    <div class="slide" id="30"><div>
+        <section>
+			<header>
+				<h2>Filtering III</h2>
+			</header>    
+            <pre>
+<code>outputFile.withWriter { Writer writer -&gt;</code>
+<code>  inputFile.withReader { Reader reader -&gt;</code>
+<code>    reader.transformLine(writer) { String line -&gt;</code>
+<code>      line.replaceAll('\t', '  ')</code>
+<code>    }</code>
+<code>  }</code>
+<code>}</code>
+</pre>
+		</section>
+	</div></div>
+    
+    
+       
+    <div class="slide" id="31"><div>
+        <section>
+			<header>
+				<h2>Filtering IV</h2>
+			</header>    
+            <pre>
+<code>inputFile.withReader { reader -&gt;</code>
+<code>  reader.transformLine(outputFile.newWriter()) { line -&gt;</code>
+<code>    line.replaceAll('\t', '  ')</code>
+<code>  }</code>
+<code>}</code>
+</pre>
+		</section>
+	</div></div>
+    
+    
+       
+    <div class="slide" id="32"><div>
+        <section>
+			<header>
+				<h2>Filtering V</h2>
+			</header>    
+            <pre>
+<code>outputFile.text = inputFile.text.replaceAll('\t', '  ')</code>
+</pre>
+		</section>
+	</div></div>
+    
+    
+       
+    <div class="slide shout" id="33"><div>
+        <section>
+			<header>
+				<h2>Walking the path</h2>
+			</header>    
+            
+		</section>
+	</div></div>
+    
+    
+       
+    <div class="slide" id="34"><div>
+        <section>
+			<header>
+				<h2>eachFile and eachDir</h2>
+			</header>    
+            <pre>
+<code>f.eachFile { File file -&gt;</code>
+<code>  ...</code>
+<code>}</code>
+<code>f.eachDir { File dir -&gt;</code>
+<code>  ...</code>
+<code>}</code>
+</pre>
+		</section>
+	</div></div>
+    
+    
+       
+    <div class="slide" id="35"><div>
+        <section>
+			<header>
+				<h2>Recursive walking I</h2>
+			</header>    
+            <pre>
+<code>currentDir.eachFileRecurse { File file -&gt;</code>
+<code>  println file.name</code>
+<code>}</code>
+<code>currentDir.eachDirRecurse { File dir -&gt;</code>
+<code>  println dir.name</code>
+<code>}</code>
+</pre>
+		</section>
+	</div></div>
+    
+    
+       
+    <div class="slide" id="36"><div>
+        <section>
+			<header>
+				<h2>Recursive walking II</h2>
+			</header>    
+            <pre>
+<code>currentDir.traverse { File file -&gt;</code>
+<code>  if (file.name.endsWith('.groovy')) {</code>
+<code>    println file.name</code>
+<code>  }</code>
+<code>}</code>
+</pre>
+		</section>
+	</div></div>
+    
+    
+       
+    <div class="slide" id="37"><div>
+        <section>
+			<header>
+				<h2>Recursive walking III</h2>
+			</header>    
+            <pre>
+<code>currentDir.traverse(nameFilter: ~/.*\.groovy/) { File file -&gt;</code>
+<code>  println file.name</code>
+<code>}</code>
+</pre>
+		</section>
+	</div></div>
+    
+    
+       
+    <div class="slide" id="38"><div>
+        <section>
+			<header>
+				<h2>Recursive walking IV</h2>
+			</header>    
+            <pre>
+<code>import static groovy.io.FileType.*</code>
+<code>...</code>
+<code>currentDir.traverse(</code>
+<code>  type: FILES,</code>
+<code>  nameFilter: ~/.*\.groovy/,</code>
+<code>  excludeNameFilter: ~/^C.*$/) { File file -&gt;</code>
+<code>    println file.name</code>
+<code>}</code>
+</pre>
+		</section>
+	</div></div>
+    
+    
+       
+    <div class="slide" id="39"><div>
+        <section>
+			<header>
+				<h2>Extending File I</h2>
+			</header>    
+            <pre>
+<code>File.metaClass.safeDelete = {</code>
+<code>  if (exists()) {</code>
+<code>    if (isDirectory()) {</code>
+<code>      if (!deleteDir()) {</code>
+<code>        def msg = &quot;Unable to delete a directory: ${name}&quot;</code>
+<code>        throw new IOException(msg)</code>
+<code>      }</code>
+<code>    ...</code>
+</pre>
+		</section>
+	</div></div>
+    
+    
+       
+    <div class="slide" id="40"><div>
+        <section>
+			<header>
+				<h2>Extending File II</h2>
+			</header>    
+            <pre>
+<code>    ...</code>
+<code>    } else {</code>
+<code>      if (!delete()) {</code>
+<code>        def msg = &quot;Unable to delete a file: ${name}&quot;</code>
+<code>        throw new IOException(msg)</code>
+<code>      }</code>
+<code>    }</code>
+<code>  }</code>
+<code>}</code>
+</pre>
+		</section>
+	</div></div>
+    
+    
+       
+    <div class="slide" id="41"><div>
+        <section>
+			<header>
+				<h2>Extending File III</h2>
+			</header>    
+            <pre>
+<code>File f = new File('test.txt')</code>
+<code>f.safeDelete()</code>
+<code>File d = new File('test_dir')</code>
+<code>d.safeDelete()</code>
+</pre>
+		</section>
+	</div></div>
+    
+    
+       
+    <div class="slide" id="42"><div>
+        <section>
+			<header>
+				<h2>External commands</h2>
+			</header>    
+            <pre>
+<code>def exitValue = &quot;ls -l&quot;.execute().exitValue()</code>
+<code>if (!exitValue) {</code>
+<code>  println &quot;Command failed with exit code: ${exitValue}&quot;</code>
+<code>}</code>
+</pre>
+		</section>
+	</div></div>
+    
+    
+       
+    <div class="slide shout" id="43"><div>
+        <section>
+			<header>
+				<h2>Defensive scripting</h2>
+			</header>    
+            
+		</section>
+	</div></div>
+    
+    
+       
+    <div class="slide shout" id="44"><div>
+        <section>
+			<header>
+				<h2>Do you like NPEs?</h2>
+			</header>    
+            
+		</section>
+	</div></div>
+    
+    
+       
+    <div class="slide" id="45"><div>
+        <section>
+			<header>
+				<h2>Even simple things can cause NPE</h2>
+			</header>    
+            <p><strong>Java:</strong></p> 
+<pre>
+<code>System.out.println(user.</code>
+<code>                     getAddress().</code>
+<code>                     getCity())</code>
+</pre>
+<p><strong>Groovy:</strong></p> 
+<pre>
+<code>println user.</code>
+<code>          address.</code>
+<code>            city</code>
+</pre>
+		</section>
+	</div></div>
+    
+    
+       
+    <div class="slide" id="46"><div>
+        <section>
+			<header>
+				<h2>Safe navigation operator (?.)</h2>
+			</header>    
+            <pre>
+<code>println user?.</code>
+<code>          address?.</code>
+<code>            city </code>
+</pre>
+		</section>
+	</div></div>
+    
+    
+       
+    <div class="slide" id="47"><div>
+        <section>
+			<header>
+				<h2>Elvis operator (?:)</h2>
+			</header>    
+            <pre>
+<code>println user?.</code>
+<code>         address?.</code>
+<code>           city ?: &quot;No idea&quot;</code>
+</pre>
+		</section>
+	</div></div>
+    
+    
+       
+    <div class="slide shout" id="48"><div>
+        <section>
+			<header>
+				<h2>Closures for DSLs</h2>
+			</header>    
+            
+		</section>
+	</div></div>
+    
+    
+       
+    <div class="slide" id="49"><div>
+        <section>
+			<header>
+				<h2>Imaginary DSL</h2>
+			</header>    
+            <pre>
+<code>transaction {</code>
+<code>  request {</code>
+<code>    id     = '2L'</code>
+<code>    name   = 'PUT'</code>
+<code>    amount = 25</code>
+<code>  }</code>
+<code>  request {</code>
+<code>    ...</code>
+<code>  }</code>
+<code>}</code>
+</pre>
+		</section>
+	</div></div>
+    
+    
+       
+    <div class="slide" id="50"><div>
+        <section>
+			<header>
+				<h2>DSL: transaction() method</h2>
+			</header>    
+            <pre>
+<code>def transaction(Closure cl) {</code>
+<code>  def processor = new RequestProcessor()</code>
+<code>  try {</code>
+<code>    processor.init()</code>
+<code>    cl.delegate = processor</code>
+<code>    cl()</code>
+<code>    sendRequests()</code>
+<code>  } finally {</code>
+<code>    processor.cleanup()</code>
+<code>}}</code>
+</pre>
+		</section>
+	</div></div>
+    
+    
+       
+    <div class="slide" id="51"><div>
+        <section>
+			<header>
+				<h2>DSL: request() method</h2>
+			</header>    
+            <pre>
+<code>class RequestProcessor {</code>
+<code>  def requests = []</code>
+<code>  def request(Closure cl) {</code>
+<code>    def request = new Request()</code>
+<code>    requests &lt;&lt; request</code>
+<code>    cl.delegate = request</code>
+<code>    cl()</code>
+<code>  }</code>
+<code>  ...</code>
+</pre>
+		</section>
+	</div></div>
+    
+    
+       
+    <div class="slide" id="52"><div>
+        <section>
+			<header>
+				<h2>DSL: Request structure</h2>
+			</header>    
+            <pre>
+<code>class Request {</code>
+<code>  String id</code>
+<code>  String name</code>
+<code>  String amount </code>
+<code>}</code>
+</pre>
+		</section>
+	</div></div>
+    
+    
+       
+    <div class="slide shout" id="53"><div>
+        <section>
+			<header>
+				<h2>Data manipulation</h2>
+			</header>    
+            
+		</section>
+	</div></div>
+    
+    
+       
+    <div class="slide" id="54"><div>
+        <section>
+			<header>
+				<h2>XML</h2>
+			</header>    
+            <pre>
+<code>import groovy.util.XmlSlurper</code>
+<code>def xmlSource = new File('shakespeare.xml')</code>
+<code>def bibliography = new XmlSlurper().parse(xmlSource)</code>
+<code>println bibliography.author</code>
+<code>bibliography.play</code>
+<code>              .findAll { it.year.toInteger() &gt; 1592 }</code>
+<code>              .each { println it.title }</code>
+</pre>
+		</section>
+	</div></div>
+    
+    
+       
+    <div class="slide" id="55"><div>
+        <section>
+			<header>
+				<h2>JSON</h2>
+			</header>    
+            <pre>
+<code>import groovy.json.JsonSlurper</code>
+<code>def reader = new FileReader('ui.json')</code>
+<code>def ui = new JsonSlurper().parse(reader)</code>
+<code>ui.items.each { println it.type }</code>
+<code>println ui.items[0]</code>
+<code>          .axes</code>
+<code>          .find {</code>
+<code>            it.fields.contains('y')</code>
+<code>          }.title</code>
+</pre>
+		</section>
+	</div></div>
+    
+    
+       
+    <div class="slide shout" id="56"><div>
+        <section>
+			<header>
+				<h2>Grab your stuff!</h2>
+			</header>    
+            
+		</section>
+	</div></div>
+    
+    
+       
+    <div class="slide" id="57"><div>
+        <section>
+			<header>
+				<h2>@Grab: import</h2>
+			</header>    
+            <pre>
+<code>@Grab('org.apache.httpcomponents:httpclient:4.2.1')</code>
+<code>import org.apache.http.impl.client.DefaultHttpClient</code>
+<code>import org.apache.http.client.methods.HttpGet</code>
+</pre>
+		</section>
+	</div></div>
+    
+    
+       
+    <div class="slide" id="58"><div>
+        <section>
+			<header>
+				<h2>@Grab: variable</h2>
+			</header>    
+            <pre>
+<code>@Grab('org.apache.httpcomponents:httpclient:4.2.1')</code>
+<code>def httpClient =</code>
+<code>  new org.apache.http.impl.client.DefaultHttpClient()</code>
+</pre>
+		</section>
+	</div></div>
+    
+    
+       
+    <div class="slide" id="59"><div>
+        <section>
+			<header>
+				<h2>@Grab: method</h2>
+			</header>    
+            <pre>
+<code>@Grab('org.apache.httpcomponents:httpclient:4.2.1')</code>
+<code>def getHttpClient() {</code>
+<code>  new org.apache.http.impl.client.DefaultHttpClient()</code>
+<code>}</code>
+</pre>
+		</section>
+	</div></div>
+    
+    
+       
+    <div class="slide" id="60"><div>
+        <section>
+			<header>
+				<h2>@Grab: class</h2>
+			</header>    
+            <pre>
+<code>@Grab('org.apache.httpcomponents:httpclient:4.2.1')</code>
+<code>class Searcher {</code>
+<code>  def httpClient</code>
+<code>  Searcher() {</code>
+<code>    httpClient =</code>
+<code>      new org.apache.http.impl.client.DefaultHttpClient()</code>
+<code>  }</code>
+<code>}</code>
+</pre>
+		</section>
+	</div></div>
+    
+    
+       
+    <div class="slide" id="61"><div>
+        <section>
+			<header>
+				<h2>@Grab: multiple</h2>
+			</header>    
+            <pre>
+<code>@Grapes([</code>
+<code>   @Grab('org.apache.httpcomponents:httpclient:4.2.1'),</code>
+<code>   @Grab('org.ccil.cowan.tagsoup:tagsoup:1.2')])</code>
+<code>class Searcher { ... }</code>
+</pre>
+		</section>
+	</div></div>
+    
+    
+       
+    <div class="slide" id="62"><div>
+        <section>
+			<header>
+				<h2>@Grab: repository</h2>
+			</header>    
+            <pre>
+<code>@GrabResolver(name='codehaus',</code>
+<code>              root='http://repository.codehaus.org/')</code>
+<code>class Searcher { ... }</code>
+</pre>
+		</section>
+	</div></div>
+    
+    
+       
+    <div class="slide" id="63"><div>
+        <section>
+			<header>
+				<h2>@Grab: exclude</h2>
+			</header>    
+            <pre>
+<code>@GrabExclude(group='commons-codec',</code>
+<code>             module='commons-codec')</code>
+<code>class Searcher { ... }</code>
+</pre>
+		</section>
+	</div></div>
+    
+    
+       
+    <div class="slide shout" id="64"><div>
+        <section>
+			<header>
+				<h2>HTTP</h2>
+			</header>    
+            
+		</section>
+	</div></div>
+    
+    
+       
+    <div class="slide" id="65"><div>
+        <section>
+			<header>
+				<h2>HTTPBuilder: import</h2>
+			</header>    
+            <pre>
+<code>@Grab(</code>
+<code>  group='org.codehaus.groovy.modules.http-builder',</code>
+<code>  module='http-builder',</code>
+<code>  version='0.6'</code>
+<code>)</code>
+<code>import groovyx.net.http.*</code>
+</pre>
+		</section>
+	</div></div>
+    
+    
+       
+    <div class="slide" id="66"><div>
+        <section>
+			<header>
+				<h2>HTTPBuilder: instantiation</h2>
+			</header>    
+            <pre>
+<code>def baseUrl = 'http://api.duckduckgo.com'</code>
+<code>def queryString = 'q=groovy&amp;format=json&amp;pretty=1'</code>
+<code>def http = new HTTPBuilder(baseUrl)</code>
+</pre>
+		</section>
+	</div></div>
+    
+    
+       
+    <div class="slide" id="67"><div>
+        <section>
+			<header>
+				<h2>HTTPBuilder: request</h2>
+			</header>    
+            <pre>
+<code>http.request(Method.POST) {</code>
+<code>  send ContentType.URLENC, queryString</code>
+<code>  response.success = { response, reader -&gt;</code>
+<code>    println response.statusLine</code>
+<code>    println reader.text</code>
+<code>  }</code>
+<code>  response.failure = { response -&gt;</code>
+<code>    println response.statusLine</code>
+<code>  }</code>
+<code>}</code>
+</pre>
+		</section>
+	</div></div>
+    
+    
+       
+    <div class="slide shout" id="68"><div>
+        <section>
+			<header>
+				<h2>SQL</h2>
+			</header>    
+            
+		</section>
+	</div></div>
+    
+    
+       
+    <div class="slide" id="69"><div>
+        <section>
+			<header>
+				<h2>SQL: settings</h2>
+			</header>    
+            <pre>
+<code>import groovy.sql.Sql</code>
+<code></code>
+<code>def dbSettings = [</code>
+<code>  url: 'jdbc:hsqldb:hsql://localhost/cookingdb',</code>
+<code>  driver: 'org.hsqldb.jdbcDriver',</code>
+<code>  user: 'sa',</code>
+<code>  password: ''</code>
+<code>]</code>
+</pre>
+		</section>
+	</div></div>
+    
+    
+       
+    <div class="slide" id="70"><div>
+        <section>
+			<header>
+				<h2>SQL: query</h2>
+			</header>    
+            <pre>
+<code>def sql = Sql.newInstance(dbSettings)</code>
+<code></code>
+<code>sql.eachRow('SELECT * FROM COOKBOOK') { cookbook -&gt;</code>
+<code>  printf '%-20s%s\n',</code>
+<code>         cookbook.id,</code>
+<code>         cookbook[1]</code>
+<code>}</code>
+</pre>
+		</section>
+	</div></div>
+    
+    
+       
+    <div class="slide" id="71"><div>
+        <section>
+			<header>
+				<h2>Groovy as a server (GaaS?)</h2>
+			</header>    
+            <pre>
+<code>&gt; groovy -l 4444 -e &quot;println new Date()&quot; &amp;</code>
+<code>&gt; telnet localhost 4444</code>
+<code>hey groovy give me the date</code>
+<code>Wed Feb 04 10:03:23 EET 2015</code>
+</pre>
+		</section>
+	</div></div>
+    
+    
+       
+    <div class="slide shout" id="72"><div>
+        <section>
+			<header>
+				<h2>Ratpack</h2>
+			</header>    
+            
+		</section>
+	</div></div>
+    
+    
+       
+    <div class="slide" id="73"><div>
+        <section>
+			<header>
+				<h2>Ratpack: import</h2>
+			</header>    
+            <pre>
+<code>@Grab(&quot;io.ratpack:ratpack-groovy:0.9.4&quot;)</code>
+<code>import static ratpack.groovy.Groovy.ratpack</code>
+</pre>
+		</section>
+	</div></div>
+    
+    
+       
+    <div class="slide" id="74"><div>
+        <section>
+			<header>
+				<h2>Ratback: script body</h2>
+			</header>    
+            <pre>
+<code>ratpack {</code>
+<code>  handlers {</code>
+<code>    get {</code>
+<code>      response.send &quot;This is the app root (try: /date)&quot;</code>
+<code>    }</code>
+<code>    get(&quot;date&quot;) {</code>
+<code>      response.send new Date().toString()</code>
+<code>    }</code>
+<code>  }</code>
+<code>}</code>
+</pre>
+		</section>
+	</div></div>
+    
+    
+       
+    <div class="slide shout" id="75"><div>
+        <section>
+			<header>
+				<h2>Sshoogr</h2>
+			</header>    
+            
+		</section>
+	</div></div>
+    
+    
+       
+    <div class="slide" id="76"><div>
+        <section>
+			<header>
+				<h2>Sshoogr: import</h2>
+			</header>    
+            <pre>
+<code>@Grab(</code>
+<code>  group='com.aestasit.infrastructure.sshoogr',</code>
+<code>  module='sshoogr',</code>
+<code>  version='0.9.16')</code>
+<code>import static com.aestasit.ssh.DefaultSsh.*</code>
+</pre>
+		</section>
+	</div></div>
+    
+    
+       
+    <div class="slide" id="77"><div>
+        <section>
+			<header>
+				<h2>Sshoogr: defaults</h2>
+			</header>    
+            <pre>
+<code>defaultUser    = 'root'</code>
+<code>defaultKeyFile = new File('secret.pem')</code>
+<code>execOptions {</code>
+<code>  verbose      = true</code>
+<code>  showCommand  = true</code>
+<code>}</code>
+</pre>
+		</section>
+	</div></div>
+    
+    
+       
+    <div class="slide" id="78"><div>
+        <section>
+			<header>
+				<h2>Sshoogr: connection</h2>
+			</header>    
+            <pre>
+<code>remoteSession {</code>
+<code>  url = 'user2:654321@localhost:2222'</code>
+<code>  exec 'rm -rf /tmp/*'</code>
+<code>  exec 'touch /var/lock/my.pid'</code>
+<code>  remoteFile('/var/my.conf').text = &quot;enabled=true&quot;</code>
+<code>}</code>
+</pre>
+		</section>
+	</div></div>
+    
+    
+       
+    <div class="slide" id="79"><div>
+        <section>
+			<header>
+				<h2>Sshoogr: multi-line content</h2>
+			</header>    
+            <pre>
+<code>remoteFile('/etc/yum.repos.d/puppet.repo').text = '''</code>
+<code>  [puppet]</code>
+<code>  name=Puppet Labs Packages</code>
+<code>  baseurl=http://yum.puppetlabs.com/el/</code>
+<code>  enabled=0</code>
+<code>  gpgcheck=0</code>
+<code>'''</code>
+</pre>
+		</section>
+	</div></div>
+    
+    
+       
+    <div class="slide" id="80"><div>
+        <section>
+			<header>
+				<h2>Sshoogr: file copying</h2>
+			</header>    
+            <pre>
+<code>remoteSession {</code>
+<code>  scp {</code>
+<code>    from { localDir &quot;$buildDir/application&quot; }</code>
+<code>    into { remoteDir '/var/bea/domain/application' }</code>
+<code>  }</code>
+<code>}</code>
+</pre>
+		</section>
+	</div></div>
+    
+    
+       
+    <div class="slide" id="81"><div>
+        <section>
+			<header>
+				<h2>Sshoogr: command result</h2>
+			</header>    
+            <pre>
+<code>def result = exec(command: '/usr/bin/mycmd',</code>
+<code>  failOnError: false, showOutput: false)</code>
+<code>if (result.exitStatus == 1) {</code>
+<code>  result.output.eachLine { line -&gt;</code>
+<code>    if (line.contains('WARNING')) {</code>
+<code>      throw new RuntimeException(&quot;First warning: ${line}&quot;)</code>
+<code>    }</code>
+<code>  }</code>
+<code>}</code>
+</pre>
+		</section>
+	</div></div>
+    
+    
+       
+    <div class="slide" id="82"><div>
+        <section>
+			<header>
+				<h2>Sshoogr: shortcuts</h2>
+			</header>    
+            <pre>
+<code>if (ok('/usr/bin/mycmd')) {</code>
+<code>  ...</code>
+<code>}</code>
+<code>if (fail('/usr/bin/othercmd')) {</code>
+<code>  ...</code>
+<code>}</code>
+</pre>
+		</section>
+	</div></div>
+    
+    
+       
+    <div class="slide" id="83"><div>
+        <section>
+			<header>
+				<h2>Sshoogr: tunnels</h2>
+			</header>    
+            <pre>
+<code>tunnel('1.2.3.4', 8080) { int localPort -&gt;</code>
+<code>  def url = &quot;http://localhost:${localPort}/flushCache&quot;</code>
+<code>  def result = new URL(url).text</code>
+<code>  if (result == 'OK') {</code>
+<code>    println &quot;Cache is flushed!&quot;</code>
+<code>  } else {</code>
+<code>    throw new RuntimeException(result)</code>
+<code>  }</code>
+<code>}</code>
+</pre>
+		</section>
+	</div></div>
+    
+    
+       
+    <div class="slide" id="84"><div>
+        <section>
+			<header>
+				<h2>Sshoogr: prefix/suffix</h2>
+			</header>    
+            <pre>
+<code>prefix('sudo ') {</code>
+<code>  exec 'rm -rf /var/log/abc.log'</code>
+<code>  exec 'service abc restart'</code>
+<code>}</code>
+<code>suffix(' &gt;&gt; output.log') {</code>
+<code>  exec 'yum -y install nginx'</code>
+<code>  exec 'yum -y install mc'</code>
+<code>  exec 'yum -y install links'</code>
+<code>}</code>
+</pre>
+		</section>
+	</div></div>
+    
+    
+       
+    <div class="slide shout" id="85"><div>
+        <section>
+			<header>
+				<h2>Summary</h2>
+			</header>    
+            
+		</section>
+	</div></div>
+    
+    
+       
+    <div class="slide" id="86"><div>
+        <section>
+			<header>
+				<h2>Take-aways</h2>
+			</header>    
+            <ul> 
+ <li>Groovy scripts are portable</li> 
+ <li>Groovy scripts are concise</li> 
+ <li>Well, the name is groovy as well!</li> 
+</ul>
+		</section>
+	</div></div>
+    
+    
+       
+    <div class="slide shout" id="87"><div>
+        <section>
+			<header>
+				<h2>Reading material</h2>
+			</header>    
+            
+		</section>
+	</div></div>
+    
+    
+       
+    <div class="slide" id="88"><div>
+        <section>
+			<header>
+				<h2>http://groovy-lang.org/</h2>
+			</header>    
+            
+<figure> 
+ <img src="images/GROOVY_WEBSITE.png" alt="Groovy Web" /> 
+</figure>
+
+		</section>
+	</div></div>
+    
+    
+       
+    <div class="slide" id="89"><div>
+        <section>
+			<header>
+				<h2>Groovy 2 Cookbook</h2>
+			</header>    
+            
+<figure> 
+ <img src="images/BOOK_GROOVY_2_COOKBOOK.png" alt="Groovy Cookbook" /> 
+</figure>
+
+		</section>
+	</div></div>
+    
+    
+       
+    <div class="slide" id="90"><div>
+        <section>
+			<header>
+				<h2>Groovy Goodness</h2>
+			</header>    
+            
+<figure> 
+ <img src="images/BOOK_GROOVY_GOODNESS.jpg" alt="Groovy Goodness" /> 
+</figure>
+
+		</section>
+	</div></div>
+    
+    
+       
+    <div class="slide shout" id="91"><div>
+        <section>
+			<header>
+				<h2>Questions?</h2>
+			</header>    
+            
+		</section>
+	</div></div>
+    
+    
+       
+    <div class="slide shout" id="92"><div>
+        <section>
+			<header>
+				<h2>Thank you!</h2>
+			</header>    
+            
+		</section>
+	</div></div>
+    
+    
+       
+    <div class="slide shout" id="93"><div>
+        <section>
+			<header>
+				<h2>Happy scripting!</h2>
+			</header>    
+            
+		</section>
+	</div></div>
+    
+		
+	<!--
+		To hide progress bar from entire presentation
+		just remove “progress” element.
+		-->
+	<div class="progress"><div></div></div>
+	<script src="scripts/script.js"></script>
+	<!-- Copyright © 2010–2012 Vadim Makeev — pepelsbey.net -->
+	<!-- Photos by John Carey — fiftyfootshadows.net -->
+</body>
+</html>
